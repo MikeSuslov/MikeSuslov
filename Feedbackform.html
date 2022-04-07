@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Форма обратной связи</title>
+  </head>
+  <body>
+    
+        <form class="feedbackform center" id="feedbackform">
+            <span class="feedbackform__title">Задать вопрос</span>
+
+            <input class="feedbackform__input" type="text" name="name" placeholder="Фамилия Имя Отчество *"
+            pattern="^[А-ЯЁа-яё\s\-]+$"
+            title="Только русские буквы, пробелы и тире. Без цифр и английских букв."
+            maxlength="100" autofocus required>
+      
+          <input class="feedbackform__input" type="tel" name="phone" placeholder="Телефон *"
+            pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+            minlength="11" maxlength='20' title="Только цифры, пробелы, &quot;-&quot;, &quot;+&quot; " required>
+      
+          <input class="feedbackform__input" type="email" name="email" placeholder="Email">
+      
+      
+          <input class="formbutton" type="submit" value="Отправить запрос"
+            formaction="https://60376bfd5435040017722533.mockapi.io/form" formmethod="post" form="feedbackform">
+        </form>
+        
+</body>
+</html>
